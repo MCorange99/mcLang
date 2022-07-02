@@ -2,8 +2,11 @@
   "name": "mclang",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "gpl-3.0",
+  "license": "GPL-3.0",
   "scripts": {
     "start": "node ."
+  },
+  "dependencies": {
+    "tokenizer": "^1.1.2"
   }
 }

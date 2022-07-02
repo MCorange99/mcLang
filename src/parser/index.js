@@ -2,6 +2,6 @@ let parser = () => {
     return 0;
 }
 
-parser.
+parser.parse = require("./parse")
 
 module.exports = parser;

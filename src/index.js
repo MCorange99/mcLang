@@ -3,9 +3,9 @@ let system = () => {
 }
 
 system.Builtin = require("./builtin");
-// system.Parser = require("./parser");
+system.Parser = require("./parser");
 system.File = require("./file")
-// system.runner = require("./runner");
+// system.Runner = require("./runner");
 
 module.exports = system;
 
