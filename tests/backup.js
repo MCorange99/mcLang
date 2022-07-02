@@ -1,5 +1,5 @@
 const process = require("process");
-const Builtin = require("./src/builtin")
+const system = require("./src/")
 
 const PROGRAM = 
       `print("{}, {}","Hello There!","hi again!\\n");`
@@ -95,4 +95,4 @@ function main(){
 
 }
 
-Builtin.stdout.test()
+system.Builtin.stdout.write("Hi")

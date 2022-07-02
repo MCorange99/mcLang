@@ -1,17 +1,8 @@
-const Builtin = require("..")
-const Write = require("./write")
-const Clear = require("./clear")
+let stdout = () => {
+	return 0;
+};
 
-exports.stdout = class stdout extends Builtin {
-	constructor(){
-		super();
-		this.write = Write
-		this.clear = Clear
-	}
+stdout.write = require("./write")
+stdout.clear = require("./clear")
 
-	write = this.write 
-
-	static test(){
-		console.log("test ok")
-	}
-}
+module.exports = stdout

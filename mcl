@@ -1,0 +1,42 @@
+#!/usr/bin/env /usr/bin/node
+const system = require("./src");
+
+function usage(bin){
+    // TODO add support for windows FS
+    if(bin.contains("/")){
+        bin = bin.split("/")
+        bin = bin[bin.length-1];  
+    } else if (bin.contains("/")){
+        console.log("TODO: add support for windows FS")
+    } else {
+        //do nothing
+    }
+    
+    const Usage = 
+`Usage:
+    ${bin} [flags] [file]
+
+Flags:
+    TBD
+
+This project is made By MCorange,
+and is protected by the GPL V3.0 license
+`
+    console.log(Usage)
+}
+
+function main(argc, argv){
+    if (argc < 3){
+        usage(argv[1]);
+        return 1;
+
+    }
+
+    const code = system.File.read(argv[3]);
+    const tokens = system.Parser.parse(code);
+    const return_code = system.Runner.run(tokens);
+
+    return return_code;
+}
+
+main(process.argv.length, process.argv);

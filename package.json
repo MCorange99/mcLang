@@ -1,8 +1,8 @@
 {
-  "name": "mcLang",
+  "name": "mclang",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "gpl-3.0",
   "scripts": {
     "start": "node ."
   }

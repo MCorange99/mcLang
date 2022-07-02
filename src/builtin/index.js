@@ -1,5 +1,6 @@
-exports.Builtin = class Builtin {
-	constructor(){
-		this.stdout = require("./stdout")
-	}
-}
+let Builtin = () => {
+	return 0;
+};
+Builtin.stdout = require("./stdout")
+
+module.exports = Builtin
